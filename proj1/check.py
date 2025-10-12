@@ -21,7 +21,7 @@ def generate(filename, count=10000, seed=None):
 
 def diff(file1, file2):
     with open(file1) as f1, open(file2) as f2:
-        c1, c2 = f1.read().strip(), f2.read().strip()
+        c1, c2 = f1.read(), f2.read()
     
     max_len = max(len(c1), len(c2))
     matches = sum(a == b for a, b in zip(c1, c2))
